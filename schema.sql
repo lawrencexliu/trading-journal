@@ -1,18 +1,18 @@
-CREATE TABLE TRADES (
-    id INTEGER PRIMARY KEY,
+CREATE TABLE trades (
+    id SERIAL PRIMARY KEY,
     instrument VARCHAR(10),
-    direction VARCHAR(4),
-    entry_price DECIMAL(10, 2),
-    exit_price DECIMAL(10, 2),
+    direction VARCHAR(10),
+    entry_price DECIMAL(10,2),
+    exit_price DECIMAL(10,2),
     quantity INTEGER,
     entry_time TIMESTAMP,
     exit_time TIMESTAMP,
-    pnl DECIMAL(10, 2),
-    commission DECIMAL(10, 2),
+    pnl DECIMAL(10,2),
+    commission DECIMAL(10,2),
     order_type VARCHAR(10),
     source VARCHAR(20),
     broker_order_id VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE JOURNAL_ENTRIES (
     id INTEGER PRIMARY KEY,
