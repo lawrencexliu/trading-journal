@@ -29,10 +29,10 @@ def insert_trade(conn, trade):
 
     
 from csv_parser import parse_csv
-
-conn = get_connection()
-trades = parse_csv('Orders.csv')
-for trade in trades:
-    insert_trade(conn, trade)
-conn.close()
-print("Done - inserted", len(trades), "trades")
+if __name__ == "__main__":
+    conn = get_connection()
+    trades = parse_csv('Orders.csv')
+    for trade in trades:
+        insert_trade(conn, trade)
+    conn.close()
+    print("Done - inserted", len(trades), "trades")
