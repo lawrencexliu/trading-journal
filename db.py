@@ -4,7 +4,7 @@ def get_connection():
     conn = psycopg2.connect(
         dbname="trading_journal",
         user="postgres",
-        password="7887",
+        password="",
         host="localhost"
     )
     return conn
